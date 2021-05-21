@@ -14,4 +14,4 @@ i2c configuration
 MySQL
 
 # Directory for clone
-/home/pi/$(repo)
+/home/pi/bin/$(repo)
