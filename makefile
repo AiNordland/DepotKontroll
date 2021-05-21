@@ -1,7 +1,7 @@
 all: sensor sensor.service
 .PHONY: all sensorservice install uninstall
-lib_dir=/usr/local/lib/depotkontroll
-conf_dir=/usr/local/etc/depotkontroll
+lib_dir=/usr/local/lib/sensor
+conf_dir=/usr/local/etc/sensor
 service_dir=/etc/systemd/system
 venv=$(lib_dir)/venv
 configfile_dir=/boot/
