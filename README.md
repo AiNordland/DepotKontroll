@@ -11,3 +11,7 @@ Python and MySQL based Sensor script for climate variables.
 # Requirements to get started
 Pip
 i2c configuration
+
+
+# Directory for clone
+/home/pi/$(repo)
