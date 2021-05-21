@@ -36,6 +36,7 @@ install: $(service_dir) sensor.service
 
 	@echo Installing relevant linux packages...
 	sudo apt-get install libopenjp2-7
+	sudo apt-get install libtiff5
 
 	@echo installation complete...
 	@echo run 'systemctl start sensor.service' to start service
@@ -50,6 +51,7 @@ uninstall:
 	
 	@echo removing relevant linux packages...
 	sudo apt -y remove libopenjp2-7
+	sudo apt -y remove libtiff5
 
 	-rm -r $(lib_dir)
 	-rm -r $(conf_dir)
