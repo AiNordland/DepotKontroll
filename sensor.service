@@ -1,0 +1,13 @@
+[Unit]
+Description=Sensor detecting and distribution service
+
+[Service]
+WorkingDirectory=/home/pi/bin/sensor/
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/home/pi/bin/sensor/.env
+ExecStart=/home/pi/bin/sensor/bin/python3 /home/pi/bin/sensor/readings.py
+
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
