@@ -2,10 +2,10 @@
 Description=Sensor detecting and distribution service
 
 [Service]
-WorkingDirectory=/home/pi/DepotKontroll/
+WorkingDirectory=/home/pi/bin/DepotKontroll/
 Environment=PYTHONUNBUFFERED=1
-EnvironmentFile=/home/pi/DepotKontroll/.env
-ExecStart=/home/pi/DepotKontroll/python3 /home/pi/DepotKontroll/readings.py
+EnvironmentFile=/home/pi/bin/DepotKontroll/.env
+ExecStart=/home/pi/bin/DepotKontroll/python3 /home/pi/bin/DepotKontroll/readings.py
 
 Restart=on-failure
 
