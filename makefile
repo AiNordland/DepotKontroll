@@ -20,8 +20,12 @@ install: $(service_dir) sensor.service
 
 	@echo Installing library files...
 	mkdir -p $(lib_dir)
+	mkdir -p $(lib_dir)/bme680
+	mkdir -p $(lib_dir)/tsys01
 	cp readings.py $(lib_dir)
-	chown root:root $(lib_dir)/*
+	cp bme680/* -R $(lib_dir)/bme680
+	cp tsys01/* -R $(lib_dir)/tsys01
+	chown pi:pi $(lib_dir)/*
 	chmod 644 $(lib_dir)/*
 
 	@echo Installing configuration files...
@@ -56,3 +60,4 @@ uninstall:
 	-rm -r $(lib_dir)
 	-rm -r $(conf_dir)
 	-rm -r $(service_dir)/sensor.service
+
