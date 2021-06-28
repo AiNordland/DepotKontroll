@@ -45,8 +45,8 @@ install: $(service_dir) sensor.service
 	@echo Installing log2ram
 	git clone https://github.com/azlux/log2ram 
 	@echo Setting up log2ram-config
-	chmod +x ~/bin/DepotKontroll/log2ram/install.sh
-	sudo ~/bin/DepotKontroll/log2ram/install.sh
+	chmod +x /home/pi/bin/DepotKontroll/log2ram/install.sh
+	sudo /home/pi/bin/DepotKontroll/log2ram/install.sh
 	
 	
 	@echo installation complete...
