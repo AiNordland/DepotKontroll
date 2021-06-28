@@ -49,8 +49,6 @@ install: $(service_dir) sensor.service
 	chmod +x install.sh
 	sudo ./install.sh
 	cd ..
-	@echo Cleaning up log2ram
-	sudo rm -r log2ram
 	
 	
 	@echo installation complete...
