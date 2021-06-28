@@ -46,7 +46,7 @@ install: $(service_dir) sensor.service
 	git clone https://github.com/azlux/log2ram 
 	@echo Setting up log2ram-config
 	chmod +x /home/pi/bin/DepotKontroll/log2ram/install.sh
-	sudo /home/pi/bin/DepotKontroll/log2ram/install.sh
+	cd /home/pi/bin/DepotKontroll/log2ram/ && sudo ./install.sh
 	
 	
 	@echo installation complete...
@@ -65,7 +65,7 @@ uninstall:
 	sudo apt -y remove libtiff5
 	
 	
-	sudo /home/pi/bin/DepotKontroll/uninstall.sh
+	cd /home/pi/bin/DepotKontroll/log2ram && sudo ./uninstall.sh
 	-rm -r $(lib_dir)
 	-rm -r $(conf_dir)
 	-rm -r $(service_dir)/sensor.service
