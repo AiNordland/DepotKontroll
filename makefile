@@ -65,7 +65,7 @@ uninstall:
 	sudo apt -y remove libtiff5
 	
 	
-	sudo ~/bin/DepotKontroll/uninstall.sh
+	sudo /home/pi/bin/DepotKontroll/uninstall.sh
 	-rm -r $(lib_dir)
 	-rm -r $(conf_dir)
 	-rm -r $(service_dir)/sensor.service
