@@ -66,6 +66,7 @@ uninstall:
 	
 	
 	cd /home/pi/bin/DepotKontroll/log2ram && sudo ./uninstall.sh
+	-rm -r /home/pi/bin/DepotKontroll/log2ram
 	-rm -r $(lib_dir)
 	-rm -r $(conf_dir)
 	-rm -r $(service_dir)/sensor.service
