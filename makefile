@@ -44,11 +44,9 @@ install: $(service_dir) sensor.service
 	
 	@echo Installing log2ram
 	git clone https://github.com/azlux/log2ram 
-	cd /bin/DepotKontroll/log2ram
 	@echo Setting up log2ram-config
-	chmod +x install.sh
-	sudo ./install.sh
-	cd ..
+	chmod +x ~/bin/DepotKontroll/log2ram/install.sh
+	sudo ~/bin/DepotKontroll/log2ram/install.sh
 	
 	
 	@echo installation complete...
@@ -65,7 +63,9 @@ uninstall:
 	@echo removing relevant linux packages...
 	sudo apt -y remove libopenjp2-7
 	sudo apt -y remove libtiff5
-
+	
+	
+	sudo ~/bin/DepotKontroll/uninstall.sh
 	-rm -r $(lib_dir)
 	-rm -r $(conf_dir)
 	-rm -r $(service_dir)/sensor.service
