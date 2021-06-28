@@ -41,7 +41,18 @@ install: $(service_dir) sensor.service
 	@echo Installing relevant linux packages...
 	sudo apt-get install libopenjp2-7
 	sudo apt-get install libtiff5
-
+	
+	@echo Installing log2ram
+	git clone https://github.com/azlux/log2ram 
+	cd log2ram
+	@echo Setting up log2ram-config
+	chmod +x install.sh
+	sudo ./install.sh
+	cd ..
+	@echo Cleaning up log2ram
+	sudo rm -r log2ram
+	
+	
 	@echo installation complete...
 	@echo run 'systemctl start sensor.service' to start service
 	@echo run 'systemctl status sensor.service' to view status
