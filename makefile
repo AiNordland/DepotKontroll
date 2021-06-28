@@ -34,6 +34,12 @@ install: $(service_dir) sensor.service
 	chown root:root $(conf_dir)/
 	chmod 644 $(conf_dir)/
 	
+	@echo Installing log2ram
+	git clone https://github.com/azlux/log2ram 
+	@echo Setting up log2ram-config
+	chmod +x /home/pi/bin/DepotKontroll/log2ram/install.sh
+	cd /home/pi/bin/DepotKontroll/log2ram/ && sudo ./install.sh
+	
 	@echo Creating python virtual environment and installing packages...
 	python3 -m venv $(venv)
 	$(venv)/bin/pip3 install -r requirements.txt
@@ -41,13 +47,6 @@ install: $(service_dir) sensor.service
 	@echo Installing relevant linux packages...
 	sudo apt-get install libopenjp2-7
 	sudo apt-get install libtiff5
-	
-	@echo Installing log2ram
-	git clone https://github.com/azlux/log2ram 
-	@echo Setting up log2ram-config
-	chmod +x /home/pi/bin/DepotKontroll/log2ram/install.sh
-	cd /home/pi/bin/DepotKontroll/log2ram/ && sudo ./install.sh
-	
 	
 	@echo installation complete...
 	@echo run 'systemctl start sensor.service' to start service
