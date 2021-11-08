@@ -9,8 +9,8 @@ Python and MySQL based Sensor script for climate variables.
 - Raspberry Pi Z
 
 # Requirements to get started
-Pip
-i2c configuration
+Pip,
+i2c configuration,
 MySQL
 
 # Directory for clone
