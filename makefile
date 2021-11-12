@@ -42,7 +42,7 @@ install: $(service_dir) sensor.service
 	
 	@echo Creating python virtual environment and installing packages...
 	python3 -m venv $(venv)
-	$(venv)/bin/pip3 install -r requirements.txt
+	sudo CFLAGS="-fcommon" $(venv)/bin/pip install -r requirements.txt -t /usr/local/lib/sensor/venv/lib/site-packages
 
 	@echo Installing relevant linux packages...
 	sudo apt-get install libopenjp2-7
